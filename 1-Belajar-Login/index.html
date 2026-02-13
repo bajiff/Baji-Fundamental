@@ -15,14 +15,18 @@
     <header>
         <img src="assets/images/dicoding-logo.png" alt="Dicoding logo">
     </header>
+
     <form id="loginForm" class="login-input">
+        <!-- Email -->
         <label for="inputEmail">Email</label>
-        <input id="inputEmail" type="text" required>
+        <input id="inputEmail" name="inputEmail" type="email" required autofocus>
+
+        <!-- Password -->
         <label for="inputPassword">Password</label>
-        <input id="inputPassword" type="text" required>
+        <input id="inputPassword" name="inputPassword" type="password" required>
+
         <button id="buttonLogin">Login</button>
     </form>
-    <!-- Perubahan  -->
 </main>
 <div id="modal" class="pop-up-modal">
     <h2>Login gagal!</h2>
