@@ -1,3 +1,4 @@
+// ? _init.js
 // mendapatkan modal element dari DOM
 const modalElement = document.querySelector('#modal');
 
