@@ -1,0 +1,42 @@
+{
+  "profile":{
+    "name":"Toko Baji Ajalah",
+    "address":"Jl. Infokan Ajalah No. 404",
+    "phone":"08123456789",
+    "email":"tokobaji@ajalah.com",
+    "description":"Toko Baji Ajalah adalah toko yang menyediakan kebutuhan primary manusia jadi jika anda membutuhkan sesuatu untuk bertahan hidup maka berbelanja di ToBaJa (Toko Baji Ajalah) adalah solusi utama",
+    "maps":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.412390233338!2d106.8455663143131!3d-6.234202495535071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3a1b0c8a8c3%3A0x8a8a8a8a8a8a8a8a!2sToko%20Baji%20Ajalah!5e0!3m2!1sid!2sid!4v1634567890123!5m2!1sid!2sid"
+  },
+  "policy":{
+    "expired":"Langsung Hubungi Admin dan anda bisa menukar dengan barang yang baru",
+    "retur":"Anda bisa mengembalikan barang dalam waktu 1x24 jam setelah pembelian dengan catatan barang dalam kondisi masih layak pakai",
+    "refund": "Setelah proses verifikasi, uang akan dikembalikan dalam waktu 1x24 jam"
+  },
+  "transactions":{
+    "cash":true,
+    "non_cash":true
+  },
+  "products":{
+    "groceries":[
+      {
+        "id":1,
+        "name":"Beras",
+        "price":10000,
+        "stock":100,
+        "variant":"kg",
+        "image":"beras.jpg",
+        "description":"Beras adalah bahan pangan pokok yang terbuat dari beras"
+      },
+      {
+        "id":2,
+        "name":"Gula",
+        "price":15000,
+        "stock": 250,
+        "variant": "gram",
+        "image": "gula.jpg",
+        "description": "Gula terjangkau"
+
+      }
+    ]
+  }
+}
