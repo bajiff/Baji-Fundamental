@@ -5,7 +5,7 @@ const content = document.getElementById("content");
 const productRender = async () => {
   try {
     // Suruh sabar dulu usernya
-    content.innerHTML = `<p>Sabar lagi loading...</p>`
+    // content.innerHTML = `<p>Sabar lagi loading...</p>`
     // Tahap consume API
     const product = await getAPI();
     
