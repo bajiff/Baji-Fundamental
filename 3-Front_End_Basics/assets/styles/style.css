@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "JetBrains Mono", sans-serif;
+}
+
+header {
+}
+
+.brand-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-name img {
+  max-width: 100px;
+}
+#header-nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px ;
+}
+button {
+  background-color: green !important;
+}
+
+
+/* Media Query */
+/* Jika Maksimal Widthnya itu 750px maka */
+@media(max-width:750px) {
+  header {
+  }
+  #drawer-button {
+    display: inline-block;
+  }
+  
+  header nav {
+    transform: translateX(-200px);
+    transition: transform .3s ease-in-out;
+  }
+  
+  header nav.open {
+
+  }
+  a 
+  {
+    color: green;
+    font-size: 20px
+    
+  }
+}
