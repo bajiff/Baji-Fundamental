@@ -40,6 +40,10 @@ nav ul li a {
 }
 
 
+#home {
+  display: flex;
+  justify-content: center;
+}
 
 main {
   display: flex;
