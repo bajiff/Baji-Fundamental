@@ -51,9 +51,29 @@ main {
   justify-content: space-between;
 }
 
+.data-rahasia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
 footer {
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
+/* ! Urutkan dari ukuran yang terbesar terlebih dahulu */
+@media screen and (max-width:1024px) {
+
+};
+
+
+@media screen and (max-width: 768px) {
+
+};
