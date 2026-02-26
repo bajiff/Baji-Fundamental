@@ -18,8 +18,9 @@
 <body id="#">
     <header id="header">
       <nav id="nav">
-        <a class="logo" href="#"><img src="assets/logo.png" alt="Logo"></a>
+        <a class="logo" href="#">Bajif</a>
         <ul>
+          <li ><a class="nav-list" href="https://www.dicoding.com/users/baji-dicoding/academies" target="_blank">Profile</a></li>
           <li ><a class="nav-list" href="#about">About</a></li>
           <li ><a class="nav-list" href="#projects">Projects</a></li>
           <li ><a class="nav-list" href="#skills">Skills</a></li>
@@ -28,10 +29,10 @@
       </nav>
     </header>
     <section id="home">
-      <img src="assets/profile.jpg" alt="Baji Ajalah">
+      <img src="https://res.cloudinary.com/daqhvvcoh/image/upload/v1771691779/roundedBaji_e90fqf.png" alt="Baji Ajalah">
       <section id="home-content">
         <h1>Hi I'm Baji 😎</h1>
-        <h2>Believe in Yourself</h2>
+        <h2>Frontend Developer</h2>
         <a id="cv" href="">Download CV</a>
         <section id="home-content-icons">
           <a href="https://github.com/bajiff" target="_blank" title="Githubnya Baji">
@@ -43,26 +44,100 @@
           <a href="https://instagram.com/_bajif" target="_blank" title="Instagramnya Baji">
             <i class="fa-brands fa-instagram fa-2x"></i>
           </a>
+          <a href="https://x.com/_bajif" target="_blank" title="Xnya Baji">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+          </a>
           <a href="https://web.facebook.com/guster.guster.9619" target="_blank" title="">
             <i class="fa-brands fa-facebook fa-2x"></i>
           </a>
         </section>
       </section>
     </section>
-    <main id="products">
-      <div class="content" id="content">
-        <article id="article-1">Article 1 </article>
-        <article id="article-2">Article 2 </article>
-      </div>
-      <aside id="aside-1">
-        <img src="assets/profile.jpg" alt="">
-      </aside>
+    <main id="about">
+      <section id="about-section">
+        <div class="content" id="content">
+          <article id="article-1">
+            <p>Bagus Aji Fernando atau biasa dipanggil Baji/Bajif adalah seorang Mahasiswa Teknik Informatika di <strong><a href="https://umc.ac.id" target="_blank" title="UMC">Universitas Muhammadiyah Cirebon</a></strong></p>
+          </article>
+          <article id="article-2">
+          <p>Saat ini, saya sedang antusias mendalami dunia <em>Web Development</em>, khususnya dalam membangun antarmuka website yang interaktif dan responsif menggunakan fondasi HTML, CSS, dan Vanilla JavaScript. Halaman ini adalah salah satu ruang untuk mendokumentasikan proses belajar dan eksperimen kode saya.</p>
+          </article>
+        </div>
+        <aside id="aside-1">
+          <img src="assets/images/Bajif-Logo.png" alt="">
+        </aside>
+      </section>
     </main>
-    <form class="data-rahasia" name="data-rahasia" action="">
-      <label for="accept">Accept</label>
-      <input type="file" name="accept" id="accept" multiple accept=".pdf,.jpg,.jpeg,.png">
-      <button>Submit</button>
-    </form>
+    <section id="projects">
+      <section class="projects-header">
+        <h2>Projects</h2>
+        <p>Beberapa hasil eksplorasi kode dan aplikasi web yang saya bangun.</p>
+      </section>
+      <section class="projects-container">
+        <article class="projects-card">
+          <img class="projects-img" src="assets/images/projects/project-1-abid-soreg.png" alt="Abid Soreg">
+          <div class="projects-info">
+            <p>Abid Soreg Website Penyewaan Sound Horeg</p>
+            <a href="https://abiddaratan.pythonanywhere.com/" target="_blank"></a>
+            <div class="tech-stack">
+              <span>Pyhton</span>
+              <span>Flask</span>
+              <span>SQLite</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </div>
+        </article>
+        <article class="projects-card">
+          <img class="projects-img" src="assets/images/projects/project-2-kamal-angkot.png" alt="Kamal Angkot">
+          <div class="projects-info">
+            <p>KangKot atau Kamal Angkot adalah Website Penyewaan Angkot</p>
+            <div class="tech-stack">
+              <span>Pyhton</span>
+              <span>Flask</span>
+              <span>SQLite</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+            <div class="projects-link">
+              <a href="">Repo</a>
+              <a href="">Demo</a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section id="skills" class="section-container">
+      <div class="section-header">
+        <h2>Keahlian & Alat</h2>
+        <p>Teknologi yang saya gunakan untuk mewujudkan ide menjadi barisan kode.</p>
+      </div>
+      
+      <div class="skills-wrapper">
+        <span class="skill-badge">HTML5 Semantik</span>
+        <span class="skill-badge">CSS3 & Flexbox</span>
+        <span class="skill-badge">Vanilla JavaScript</span>
+        <span class="skill-badge">REST API & Fetch</span>
+        <span class="skill-badge">Git & GitHub</span>
+        <span class="skill-badge">Responsive Web Design</span>
+      </div>
+    </section>
+    
+    <section id="contact" class="section-container">
+      <div class="section-header">
+        <h2>Mari Terhubung!</h2>
+      </div>
+      
+      <div class="contact-wrapper">
+        <p>Saya selalu terbuka untuk diskusi mengenai teknologi, peluang magang, kolaborasi proyek, atau sekadar bertukar sapa. Jangan ragu untuk menghubungi saya!</p>
+        
+        <div class="contact-links">
+          <a href="mailto:emailanda@gmail.com" class="btn-primary">Kirim Email</a>
+          <a href="https://github.com/bajiff" target="_blank" class="btn-outline">Profil GitHub</a>
+        </div>
+      </div>
+    </section>
     <footer id="footer">Baji Ajalah 2026</footer>
     
     <!-- Javascript -->

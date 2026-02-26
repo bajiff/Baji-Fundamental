@@ -6,7 +6,7 @@
   --tertiary-color:#9cd5ff;
   --quaternary-color:#f7f8f0;
   --smooth-shadow: rgba(0, 0, 0, 0.3);
-  --neon-glow: #00d4ff; 
+  --neon-color: #00d4ff; 
 }
 
 * {
@@ -16,10 +16,15 @@
   list-style-type: none;
   text-decoration: none;
   font-family: "JetBrains Mono", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1 {
   font-size: 40px;
+}
+
+p {
+  font-size: 20px;
 }
 
 body {
@@ -28,7 +33,7 @@ body {
 }
 
 header {
-  padding: 40px 40px 0 40px ;
+  padding: 50px 90px 0 90px ;
 }
 
 nav {
@@ -36,10 +41,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   font-size: larger;
-  padding: 10px;
+  padding: 10px 50px;
   background-color: var(--secondary-color);
   border-radius: 10px;
   box-shadow: 10px 10px 5px var(--smooth-shadow);
+}
+
+nav a {
+    color: var(--quaternary-color)
 }
 
 nav ul {
@@ -68,8 +77,8 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
   width: 100%;
+  margin: 120px 0 500px 0;
 }
 
 #home-content {
@@ -94,11 +103,11 @@ nav ul li a:hover {
 }
 
 #cv:hover {
-  border-color: var(--neon-glow);
+  border-color: var(--neon-color);
   box-shadow:
-  0 0 10px var(--neon-glow),
-  0 0 20px var(--neon-glow),
-  0 0 40px var(--neon-glow);
+  0 0 10px var(--neon-color),
+  0 0 20px var(--neon-color),
+  0 0 40px var(--neon-color);
   color: var(--quaternary-color);
   transform: translateY(-5px);
 }
@@ -122,29 +131,181 @@ nav ul li a:hover {
 
 #home-content-icons a:hover {
     box-shadow: var(--smooth-shadow);
-    border-color: var(--neon-glow);
-    color: var(--quaternary-color);
+    border-color: var(--neon-color);
     box-shadow: 
-    0 0 10px var(--neon-glow),
-    0 0 20px var(--neon-glow),
-    0 0 40px var(--neon-glow);
+    0 0 10px var(--neon-color),
+    0 0 20px var(--neon-color),
+    0 0 40px var(--neon-color);
     transform: translateY(-5px);
 }
 
+/* ? Bagian Main */
 main {
-  display: flex;
-  padding: 30px 40px ;
-  justify-content: space-between;
+  padding: 50px 90px;
 }
 
-.data-rahasia {
+#about-section {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  border-radius: 10px;
+
+  background-color: var(--secondary-color);
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: justify;
+  gap: 20px;
+}
+
+#aside-1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 20px;
-
 }
+
+#aside-1 img {
+  width: 300px;
+  border-radius: 50%;
+}
+
+#projects{
+  padding: 50px 90px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 30px;
+}
+
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.projects-img {
+  max-width: 35%;
+}
+
+
+
+/* --- PENGATURAN UMUM SECTION --- */
+/* Agar jarak tiap section konsisten */
+.section-container {
+  padding: 60px 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memastikan isi section ada di tengah */
+  gap: 40px;
+}
+
+.section-header {
+  text-align: center;
+  color: #ffffff;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--quaternary-color); /* Warna aksen Baji */
+}
+
+.section-header p {
+  color: #a0a0a0;
+}
+
+/* --- SECTION SKILLS --- */
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Jurus andalan agar lencana turun ke bawah jika penuh */
+  justify-content: center;
+  gap: 15px;
+  max-width: 800px;
+}
+
+.skill-badge {
+  background-color: var(--secondary-color, #1e1e1e);
+  color: #e0e0e0;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Efek menyala saat lencana keahlian disentuh mouse */
+.skill-badge:hover {
+  border-color: var(--quaternary-color);
+  color: var(--quaternary-color);
+  transform: translateY(-5px); /* Efek melayang ke atas sedikit */
+  box-shadow: 0 5px 15px rgba(173, 255, 47, 0.2);
+}
+
+/* --- SECTION CONTACT --- */
+.contact-wrapper {
+  text-align: center;
+  max-width: 600px;
+  background-color: var(--secondary-color, #1e1e1e);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-wrapper p {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Berjaga-jaga jika di layar HP tombolnya kepanjangan */
+}
+
+/* Tombol Utama (Kirim Email) */
+.btn-primary {
+  background-color: var(--quaternary-color);
+  color: #000000;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: yellow;
+  transform: scale(1.05); /* Membesar sedikit */
+}
+
+/* Tombol Sekunder (GitHub & LinkedIn) */
+.btn-outline {
+  background-color: transparent;
+  color: var(--quaternary-color);
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid var(--quaternary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--quaternary-color);
+  color: #000;
+}
+
+
 
 footer {
   padding: 30px 40px ;
@@ -157,9 +318,38 @@ footer {
 /* ! Urutkan dari ukuran yang terbesar terlebih dahulu */
 @media screen and (max-width:1024px) {
 
+  #aside-1 img {
+    display: none;
+  }
+  .projects-container {
+    display: flex;
+  flex-direction: column;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    display: none;
+  }
+  nav a {
+    color: var(--quaternary-color)
+    
+  }
 };
 
 
 @media screen and (max-width: 768px) {
+
+
+  .section-container {
+    padding: 40px 20px;
+  }
+  
+  .contact-links {
+    flex-direction: column;
+    gap: 15px;
+  }
 
 };
