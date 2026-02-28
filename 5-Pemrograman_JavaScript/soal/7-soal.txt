@@ -1,0 +1,17 @@
+const daftarPelanggan = [
+  { nama: "Rizky", umur: 16, kendaraan: "Mobil SUV" },
+  { nama: "Baji", umur: 18, kendaraan: "MiG-25" },
+  { nama: "Chifuyu", umur: 15, kendaraan: "Sepeda Onthel" },
+  { nama: "Draken", umur: 20, kendaraan: "Harley Davidson" }
+];
+
+// TODO 1: Buatlah For-Loop untuk menelusuri daftarPelanggan
+// Gunakan let i = 0; i < daftarPelanggan.length; i++
+
+  // TODO 2: Di DALAM loop, buat sebuah variabel untuk menyimpan pelanggan yang sedang dicek
+  // Hint: const pelangganSaatIni = daftarPelanggan[i];
+
+  // TODO 3: Di DALAM loop, gunakan logika If/Else milikmu sebelumnya!
+  // Cek apakah umur pelangganSaatIni >= 17.
+  // Jika ya, console.log: "Selamat [nama], Anda bisa menyewa [kendaraan]."
+  // Jika tidak, console.log: "Maaf [nama], Anda belum cukup umur."
