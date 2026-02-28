@@ -5,6 +5,6 @@ const user = {
 
 const {nama, sudahLogin} = user;
 
-const tombolNavigasi = sudahLogin === true ? "Logout" : "Login";
+const tombolNavigasi = sudahLogin ? "Logout" : "Login";
 
 console.log(tombolNavigasi);
