@@ -1,0 +1,13 @@
+
+const hargaMakanan = [10000, 20000, 15000];
+
+// TODO 1: Gunakan .map() pada array hargaMakanan.
+// Simpan hasilnya di dalam variabel bernama 'hargaDiskon'.
+// Ingat, biasakan pakai 'const' untuk variabel baru!
+
+// TODO 2: Di dalam map(), buat Arrow Function yang menerima satu parameter, sebut saja (harga).
+// Kembalikan (return) nilai dari harga tersebut yang dikurangi 5000.
+
+// TODO 3: Lakukan console.log(hargaDiskon) di baris paling bawah.
+// Coba perhatikan, apakah hasilnya menjadi Array baru dengan harga yang sudah lebih murah?
+
