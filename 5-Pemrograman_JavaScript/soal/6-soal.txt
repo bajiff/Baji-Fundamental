@@ -1,0 +1,20 @@
+const pelanggan = {
+  nama: "Rizky",
+  umur: 16,
+  kendaraan: "Mobil SUV"
+};
+
+// TODO 1: Buatlah logika if/else di bawah ini.
+// Cek apakah umur pelanggan lebih dari atau sama dengan 17 tahun.
+// Petunjuk: gunakan operator >= untuk mengecek "lebih dari atau sama dengan".
+
+// TODO 2: Jika kondisi terpenuhi (umur >= 17), 
+// Lakukan console.log menggunakan template literal: "Selamat [nama], kamu bisa menyewa [kendaraan]."
+
+// TODO 3: Jika kondisi TIDAK terpenuhi (else),
+// Lakukan console.log menggunakan template literal: "Maaf [nama], kamu belum cukup umur untuk menyewa [kendaraan]."
+
+
+// Tempel kode dibawah ini
+
+
