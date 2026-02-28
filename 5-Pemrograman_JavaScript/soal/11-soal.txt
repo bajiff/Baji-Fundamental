@@ -1,0 +1,12 @@
+const profilUser = {
+  username: "BajiKeisuke",
+  level: 99,
+  role: "Kapten Divisi 1",
+  status: "Aktif"
+};
+
+// TODO 1: Gunakan teknik Destructuring untuk mengeluarkan 'username' dan 'role' dari dalam profilUser.
+// (Tidak perlu mengeluarkan 'level' dan 'status')
+
+// TODO 2: Lakukan console.log menggunakan Template Literal.
+// Format: "Halo Kapten Divisi 1 BajiKeisuke!" (Gunakan variabel hasil bongkaranmu, BUKAN memanggil profilUser.username lagi)
