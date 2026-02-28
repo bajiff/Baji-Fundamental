@@ -1,0 +1,16 @@
+/**
+ * TODO:
+ * 1. Buatlah variabel bernama `favoriteFruits` yang berisi sebuah Array.
+ * 2. Isi Array tersebut dengan 3 nama buah kesukaanmu (dalam bentuk tipe data string).
+ * 3. Buatlah variabel bernama `buahPertama` dan isi nilainya dengan 
+ * buah urutan PERTAMA yang diambil dari Array `favoriteFruits`.
+ * (Ingat: pakai kurung siku [] dan nomor Index-nya ya!)
+ * 4. Buatlah variabel bernama `buahKetiga` dan isi nilainya dengan 
+ * buah urutan KETIGA dari Array tersebut.
+ */
+
+// Tulis kodemu di bawah ini:
+
+
+
+// Tambahkan console.log() untuk mengecek isi buahPertama dan buahKetiga
