@@ -21,13 +21,9 @@
     </td>
   </tr>
 </table>
-<audio controls autoplay muted>
-  <source src="https://res.cloudinary.com/daqhvvcoh/video/upload/v1772290440/Phonk-1-Crystals_b3azly.mp3" type="audio/mpeg"> 
-</audio>
-
 
 ```bash
 git clone https://github.com/bajiff/Baji-Fundamental/5-Pemrograman_JavaScript
-cd 5-Pemrograman_JavaScript
+cd 5-Pemrograman_JavaScript.git
 ```
 <p>Langsung Clone aja gapapa, jangan lupa klik star dulu hehew biar nambah semanget ngoding nya</p>

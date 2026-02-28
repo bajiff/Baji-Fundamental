@@ -1,0 +1,17 @@
+const anggota = {
+  nama: "Mikey",
+  jabatan: "Ketua",
+  pesanRahasia: "Besok kita kumpul di kuil Musashi jam 8 malam."
+};
+
+// TODO 1: Lakukan Destructuring untuk mengambil 'jabatan' dan 'pesanRahasia' dari object anggota.
+
+// TODO 2: Gunakan Logical AND (&&) untuk mengecek kondisi:
+// Apakah jabatan adalah "Ketua"? 
+// Hint: Gunakan perbandingan === 
+
+// TODO 3: Di sebelah kanan tanda &&, lakukan console.log() untuk mencetak isi dari pesanRahasia.
+// Format logikanya: kondisi && console.log(variabelPesan)
+
+// TODO 4 (Opsional tapi seru): Setelah berhasil, coba ganti data jabatan Mikey di atas menjadi "Anggota Biasa", 
+// lalu jalankan kodemu. Harusnya console.log tidak akan mencetak apa-apa!
