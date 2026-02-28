@@ -1,0 +1,19 @@
+const statusBaji = {
+  username: "BajiKeisuke",
+  level: 99,
+  darah: 1000,
+  divisi: 1
+};
+
+// TODO 1: Buat variabel 'const' baru bernama 'bajiModeMarah'.
+
+// TODO 2: Buat Object baru menggunakan { }. Di dalamnya, gunakan Spread Operator (...) 
+// untuk mem-fotokopi semua isi 'statusBaji' ke dalam Object baru ini.
+
+// TODO 3: Di dalam Object baru tersebut (setelah tanda koma dari fotokopian), 
+// tambahkan senjata baru yaitu: senjata: "Pipa Besi".
+
+// TODO 4: Di Object baru itu juga, ubah/timpa nilai 'darah' menjadi 5000.
+// (Ingat: tulislah update-an darah ini SETELAH spread operator agar bisa menimpa nilai darah yang lama)
+
+// TODO 5: Lakukan console.log(bajiModeMarah) dan lihat hasilnya!
