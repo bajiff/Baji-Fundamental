@@ -21,9 +21,8 @@
     </td>
   </tr>
 </table>
-<audio controls autoplay>
-  <source src="https://res.cloudinary.com/daqhvvcoh/video/upload/v1772290440/Phonk-1-Crystals_b3azly.mp3" type="audio/mpeg">
-  Browser kamu tidak mendukung pemutar audio.
+<audio controls autoplay muted>
+  <source src="https://res.cloudinary.com/daqhvvcoh/video/upload/v1772290440/Phonk-1-Crystals_b3azly.mp3" type="audio/mpeg"> 
 </audio>
 
 
