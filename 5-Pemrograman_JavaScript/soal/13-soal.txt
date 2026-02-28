@@ -1,0 +1,15 @@
+const user = {
+  nama: "Chifuyu",
+  sudahLogin: true
+};
+
+// TODO 1: Buat variabel const bernama 'tombolNavigasi'.
+
+// TODO 2: Gunakan Ternary Operator untuk mengecek nilai 'sudahLogin' dari dalam object user.
+// Hint: Kamu bisa membongkarnya dulu (destructuring) atau memanggilnya langsung pakai dot notation.
+
+// TODO 3: Jika true (sudah login), kembalikan teks "Logout".
+
+// TODO 4: Jika false (belum login), kembalikan teks "Login".
+
+// TODO 5: Lakukan console.log(tombolNavigasi) untuk melihat tombol apa yang seharusnya dirender di layar.
