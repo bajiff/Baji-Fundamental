@@ -12,5 +12,8 @@ const keranjangBelanja = [
 // Format yang diminta: "[produk] harganya Rp [harga]"
 
 // TODO 3: Lakukan console.log(notaPesanan).
+
 // Hasil akhirnya harus berupa Array berisi teks seperti: 
+
 // [ 'Kopi Gula Aren harganya Rp 18000', 'Roti Bakar harganya Rp 15000', ... ]
+

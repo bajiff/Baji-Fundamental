@@ -1,0 +1,16 @@
+const menuRestoran = [
+  { nama: "Nasi Goreng Spesial", harga: 25000 },
+  { nama: "Mie Ayam Biasa", harga: 13000 },
+  { nama: "Es Teh Manis", harga: 5000 },
+  { nama: "Ayam Bakar Madu", harga: 30000 }
+];
+
+// TODO 1: Gunakan .filter() pada array menuRestoran.
+// Simpan hasilnya di dalam variabel const bernama 'menuMurah'.
+
+// TODO 2: Di dalam filter(), gunakan Arrow Function yang menerima parameter (menu).
+// Kembalikan (return) sebuah kondisi logika: apakah harga menu kurang dari atau sama dengan 15000?
+// Petunjuk: gunakan operator <= 
+
+// TODO 3: Lakukan console.log(menuMurah).
+// Hasilnya harus berupa Array of Objects yang HANYA berisi Mie Ayam dan Es Teh Manis!

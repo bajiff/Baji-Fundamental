@@ -4,4 +4,8 @@ const keranjangBelanja = [
   { produk: "Mie Rebus", harga: 12000 }
 ];
 
+const notaPesan = keranjangBelanja.map((item) => {
+  return `${item.produk} Harganya: ${item.harga}`
+});
 
+console.log(notaPesan);
