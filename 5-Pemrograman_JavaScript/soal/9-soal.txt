@@ -1,0 +1,16 @@
+const keranjangBelanja = [
+  { produk: "Kopi Gula Aren", harga: 18000 },
+  { produk: "Roti Bakar", harga: 15000 },
+  { produk: "Mie Rebus", harga: 12000 }
+];
+
+// TODO 1: Gunakan .map() pada keranjangBelanja.
+// Simpan hasilnya di dalam variabel const bernama 'notaPesanan'.
+
+// TODO 2: Di dalam map(), gunakan Arrow Function yang menerima parameter (item).
+// Kembalikan (return) sebuah teks menggunakan Template Literal (backtick).
+// Format yang diminta: "[produk] harganya Rp [harga]"
+
+// TODO 3: Lakukan console.log(notaPesanan).
+// Hasil akhirnya harus berupa Array berisi teks seperti: 
+// [ 'Kopi Gula Aren harganya Rp 18000', 'Roti Bakar harganya Rp 15000', ... ]
