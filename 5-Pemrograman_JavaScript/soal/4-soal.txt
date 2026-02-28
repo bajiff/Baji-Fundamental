@@ -1,0 +1,26 @@
+/**
+ * TODO:
+ * 1. Buatlah sebuah variabel bernama `smartphone` yang berisi sebuah Object.
+ * 2. Di dalam Object tersebut, berikan 3 label (key) beserta nilainya (value):
+ * - `merk` (tipe data string, misalnya "Samsung")
+ * - `penyimpanan` (tipe data number, misalnya 128)
+ * - `kameraBagus` (tipe data boolean, yaitu true atau false)
+ * 3. Buatlah variabel bernama `merkHp`.
+ * 4. Isi variabel `merkHp` tersebut dengan memanggil properti `merk` 
+ * dari dalam Object `smartphone` (Gunakan tanda titik!).
+ */
+
+// Tulis kodemu di bawah ini:
+
+const smartphone = {
+  "merk": "Samsung",
+  "penyimpanan":"1024 Gigabyte",
+  "kameraBagus": true,
+}
+
+const merkHP = smartphone.merk;
+console.log(merkHP);
+
+
+
+// Tambahkan console.log(merkHp) untuk mengecek hasilnya

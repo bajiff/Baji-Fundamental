@@ -1,0 +1,20 @@
+/**
+ * TODO:
+ * 1. Buatlah variabel bernama `katalogBuku` yang berisi sebuah Array.
+ * 2. Di dalam Array tersebut, masukkan 2 buah Object.
+ * 3. Setiap Object mewakili sebuah buku dan WAJIB memiliki 3 label (key):
+ * - `judul` (tipe data string)
+ * - `penulis` (tipe data string)
+ * - `jumlahHalaman` (tipe data number)
+ * 4. Buatlah variabel bernama `bukuPilihan`.
+ * 5. Isi variabel `bukuPilihan` tersebut dengan mengambil properti `judul` 
+ * dari buku urutan KEDUA yang ada di dalam Array `katalogBuku`.
+ * (Ingat perpaduan kurung siku [] untuk index, dan titik . untuk object!)
+ */
+
+// Tulis kodemu di bawah ini:
+
+
+
+
+// Tambahkan console.log(bukuPilihan) untuk melihat apakah judulnya berhasil diambil
