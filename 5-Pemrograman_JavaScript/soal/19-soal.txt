@@ -1,0 +1,20 @@
+const markasSatu = {
+  nama: "Kuil Musashi",
+  detailLokasi: {
+    kota: "Tokyo",
+    jalan: "Shibuya"
+  }
+};
+
+const markasDua = {
+  nama: "Gudang Kosong",
+  // Perhatikan: object detailLokasi sengaja tidak dibuat di sini!
+};
+
+// TODO 1: Coba akses jalan dari markasSatu.
+// Lakukan console.log menggunakan Optional Chaining untuk mengambil properti 'jalan' di dalam 'detailLokasi'.
+// Hint: markasSatu.detailLokasi?.jalan
+
+// TODO 2: Lakukan hal yang sama untuk markasDua!
+// Lakukan console.log menggunakan Optional Chaining untuk mengambil properti 'jalan' dari 'detailLokasi' milik markasDua.
+// Karena detailLokasi tidak ada, harusnya hasilnya di console adalah 'undefined', BUKAN tulisan merah error!
