@@ -1,2 +1,21 @@
 
-https://jsonplaceholder.typicode.com/posts
+let saldo = 50000;
+let tarikTunai = 100000; // Wah, mau narik lebih dari saldo nih!
+
+console.log("Memulai transaksi...");
+
+// TODO 1: Buat blok try { ... }
+// Di dalamnya, buat logika if/else:
+// - Jika tarikTunai lebih besar dari saldo, lempar error dengan cara mengetik persis seperti ini:
+//   throw new Error("Saldo Anda tidak mencukupi!");
+// - Jika tidak, kurangi saldo dengan tarikTunai, lalu console.log("Penarikan berhasil! Sisa saldo: " + saldo);
+
+
+// TODO 2: Buat blok catch (error) { ... } tepat setelah penutup blok try
+// Di dalamnya, lakukan console.log dengan template literal:
+// "Mohon maaf, transaksi dibatalkan. Sistem mendeteksi: [error.message]"
+// (Gunakan error.message untuk mengambil pesan yang kita lempar di atas)
+
+
+// TODO 3: Buat blok finally { ... } tepat setelah penutup blok catch
+// Di dalamnya, cukup lakukan console.log("Terima kasih telah menggunakan ATM kami. Jangan lupa ambil kartu Anda.");
