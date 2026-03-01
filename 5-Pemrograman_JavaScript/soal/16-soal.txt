@@ -1,0 +1,20 @@
+let hpMonster = 100;
+let jumlahPukulan = 0;
+
+console.log("Pertarungan dimulai!");
+
+// TODO 1: Buat perulangan while di bawah ini.
+// Kondisinya: selama hpMonster lebih besar dari 0 (hpMonster > 0)
+
+  // TODO 2: Di DALAM blok while, kurangi hpMonster dengan 25 setiap kali berulang.
+  // Hint: hpMonster = hpMonster - 25;  (atau cara singkatnya: hpMonster -= 25;)
+
+  // TODO 3: Di DALAM blok while, tambahkan jumlahPukulan dengan 1.
+  // Hint: jumlahPukulan++;
+
+  // TODO 4 (Opsional): Di DALAM blok while, lakukan console.log sisa darah monster.
+  // Contoh: console.log(`Serangan berhasil! Sisa HP Monster: ${hpMonster}`);
+
+
+// TODO 5: Di LUAR (di bawah) blok while, lakukan console.log hasil akhirnya.
+// Gunakan template literal: "Monster kalah setelah [jumlahPukulan] pukulan!"
