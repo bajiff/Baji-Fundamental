@@ -1,0 +1,25 @@
+const tamu = {
+  nama: "Draken",
+  tipeMember: "Gold" 
+};
+
+let pesanSapaan = "";
+
+// TODO 1: Buatlah blok 'switch' yang mengecek nilai dari tamu.tipeMember
+
+  // TODO 2: Buat 'case "Silver":'
+  // Jika Silver, isi variabel pesanSapaan dengan: "Selamat datang [nama], nikmati fasilitas standar kami."
+  // Jangan lupa tambahkan 'break;'
+
+  // TODO 3: Buat 'case "Gold":'
+  // Jika Gold, isi pesanSapaan dengan: "Halo [nama]! Anda mendapat akses ke Kolam Renang VIP."
+  // Jangan lupa tambahkan 'break;'
+
+  // TODO 4: Buat 'case "Platinum":'
+  // Jika Platinum, isi pesanSapaan dengan: "Hormat kami [nama], seluruh layanan Spa dan Restoran gratis untuk Anda."
+  // Jangan lupa tambahkan 'break;'
+
+  // TODO 5: Buat 'default:' (untuk tamu biasa / tidak punya member)
+  // Isi pesanSapaan dengan: "Selamat datang [nama], silakan nikmati lobi kami."
+
+// TODO 6: Lakukan console.log(pesanSapaan) di baris paling bawah.
