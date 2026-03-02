@@ -17,10 +17,10 @@ function categorizeNumber(input) {
         apakahPrima =  false;
         break;
       } 
+    }
       if (apakahPrima) {
         return "Prima"
       }
-    }
   } else if (input % 2 === 0) {
     return "Genap";
   } else if (input % 2 === 1) {
