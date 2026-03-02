@@ -1,0 +1,28 @@
+class RobotAntiHacker {
+  // TODO 1: Deklarasikan properti private bernama '#hp' di sini (sebelum constructor).
+
+  constructor(nama, senjata, hpAwal) {
+    this.nama = nama; // nama tetap public
+    this.senjata = senjata; // senjata tetap public
+    
+    // TODO 2: Masukkan nilai 'hpAwal' ke dalam properti private '#hp' milik robot ini.
+    // Hint: this.#hp = hpAwal;
+  }
+
+  // TODO 3: Buat method public bernama 'terimaSerangan(damage)'.
+  // Di dalamnya, kurangi this.#hp dengan damage.
+  // Hint: this.#hp -= damage;
+  
+
+  // TODO 4: Buat method public bernama 'cekRadar()'.
+  // Method ini hanya bertugas mengembalikan (return) nilai this.#hp saat ini.
+  // Ini adalah satu-satunya cara sah bagi orang luar untuk melihat sisa HP robot!
+
+}
+
+// --- TES SISTEM KEAMANAN ---
+// TODO 5: Buat robot baru bernama 'robotTitan' dari class RobotAntiHacker dengan HP 1000.
+
+// TODO 6: Serang robotTitan menggunakan method terimaSerangan(200).
+
+// TODO 7: Lakukan console.log dengan memanggil method cekRadar() untuk melihat sisa HP-nya.
