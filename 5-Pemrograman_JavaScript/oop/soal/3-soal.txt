@@ -1,0 +1,100 @@
+/**
+ * TODO 1: Buatlah class INDUK bernama 'Karakter'
+ * - Memiliki constructor yang menerima 3 parameter: nama, level, isMelee (boolean/petarung jarak dekat)
+ * - Simpan ketiga parameter tersebut ke dalam properti (this.nama = nama, dst...)
+ */
+// Tulis class Karakter di sini
+
+
+/**
+ * TODO 2: Buatlah class ANAK bernama 'Petarung'
+ * - Class ini harus extends dari Karakter
+ * - Punya constructor yang HANYA menerima 2 parameter: nama, level
+ * - Di DALAM constructor Petarung, panggil super(nama, level, true) 
+ * (Karena petarung PASTI jarak dekat / isMelee = true)
+ * - Punya method 'pukul()' yang me-return string: "${this.nama} melayangkan pukulan maut!"
+ */
+// Tulis class Petarung di sini
+
+
+class Petarung extends Karakter {
+  constructor(nama, level){
+    super(nama,level,true)
+  };
+
+  pukul(){
+    return `${this.nama} melayangkan pukulan maut!`
+  }
+}
+
+/**
+ * TODO 3: Buatlah class ANAK bernama 'Penembak'
+ * - Class ini harus extends dari Karakter
+ * - Punya constructor yang HANYA menerima 2 parameter: nama, level
+ * - Di DALAM constructor Penembak, panggil super(nama, level, false)
+ * (Karena penembak BUKAN jarak dekat / isMelee = false)
+ * - Punya method 'tembak()' yang me-return string: "${this.nama} menembak dari jauh!"
+ */
+// Tulis class Penembak di sini
+
+
+
+/**
+ * TODO 4: Instansiasi (Pembuatan Objek)
+ * - Buat variabel const bernama 'baji' dari class Petarung. Beri nama "Keisuke Baji" dan level 99.
+ * - Buat variabel const bernama 'kisaki' dari class Penembak. Beri nama "Tetta Kisaki" dan level 50.
+ */
+// Tulis instansiasi di sini
+
+class Karakter {
+  constructor(nama = "Baji", level = 1, hasMelee = false, hasStone = false, hasVengeance = false){
+    this.nama = nama;
+    this.level = level;
+    this.hasMelee = hasMelee;
+    this.hasStone = hasStone;
+    this.hasVengeance = hasVengeance;
+  };
+}
+
+class Petarung extends Karakter {
+  constructor(nama, level){
+    super(nama,level,true,false,false)
+  };
+
+  pukul(){
+    return `${this.nama} melayangkan pukulan maut!`
+  };
+};
+
+class Pitcher extends Karakter {
+  constructor(nama, level){
+    super(nama,level,false,true,false)
+  };
+
+  throwStone(){
+    return `${this.nama} melempar batu`;
+  };
+};
+
+class Tanker extends Karakter {
+  constructor(nama,level){
+    super(nama,level,false,false,true)
+  };
+
+  vengeanceMode(){
+    return `${this.nama} activated Vengeance Mode!`
+  }
+}
+
+const baji = new Petarung("Baji Ajalah", 1000);
+const meki = new Pitcher("Meki",250);
+const jeki = new Tanker("Jeki",500);
+
+console.log(jeki);
+console.log(jeki.level);
+console.log(jeki.vengeanceMode())
+console.log(meki);
+console.log(meki.throwStone());
+
+console.log(baji);
+console.log(baji.pukul());
