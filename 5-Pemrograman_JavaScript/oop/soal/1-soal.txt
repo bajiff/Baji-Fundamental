@@ -1,0 +1,28 @@
+// TODO 1: Buatlah sebuah class bernama 'RobotPetarung'.
+// PENTING: Penamaan class di JavaScript biasakan menggunakan huruf kapital di awal kata (PascalCase).
+
+
+  // TODO 2: Di DALAM class tersebut, buatlah fungsi khusus bernama 'constructor'.
+  // Constructor ini harus menerima 2 parameter: 'nama' dan 'senjata'.
+  
+
+  // TODO 3: Di DALAM constructor, simpan parameter tersebut menjadi properti milik dirinya sendiri.
+  // Hint: gunakan this.nama = nama; dan this.senjata = senjata;
+
+
+  // TODO 4: Di DALAM class (tapi DI LUAR constructor), buatlah sebuah method bernama 'serang()'.
+  // Method ini tidak perlu menerima parameter.
+  // Method ini harus mengembalikan (return) teks menggunakan Template Literal:
+  // "Robot [nama] menyerang dengan [senjata]!" (Gunakan this.nama dan this.senjata)
+
+
+
+// --- PABRIK BEROPERASI DI SINI ---
+
+// TODO 5: Cetak robot pertamamu! Buat variabel const bernama 'robotMikey'.
+// Isi dengan hasil cetakan class RobotPetarung menggunakan kata kunci 'new'.
+// Berikan argumen nama: "MikeyBot" dan senjata: "Tendangan Nuklir".
+
+
+// TODO 6: Lakukan console.log untuk menjalankan method serang dari robotMikey!
+// Hint: console.log(robotMikey.serang());
