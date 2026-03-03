@@ -1,0 +1,25 @@
+/**
+ * TODO: Buat fungsi rekursif bernama 'hitungMundur'
+ * Fungsi ini menerima satu parameter: 'angka' (tipe data number)
+ */
+function hitungMundur(angka) {
+  // 1. BASE CASE (Kondisi Berhenti)
+  // Jika 'angka' sudah mencapai 0, 
+  // kembalikan (return) string "BOOM! Ledakan terjadi!"
+  
+
+  // 2. RECURSIVE CASE (Kondisi Berulang)
+  // Jika belum 0, lakukan console.log(angka)
+  // Lalu, panggil KEMBALI fungsi hitungMundur ini, tapi angkanya dikurangi 1.
+  // Hint: return hitungMundur(angka - 1);
+}
+
+// TES SISTEM BOM WAKTU:
+console.log(hitungMundur(5));
+// Output yang diharapkan di console:
+// 5
+// 4
+// 3
+// 2
+// 1
+// "BOOM! Ledakan terjadi!"

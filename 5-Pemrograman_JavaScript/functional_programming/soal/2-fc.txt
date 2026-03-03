@@ -1,0 +1,22 @@
+const pasukanMentah = [
+  { id: 1, nama: "Baji", divisi: 1, isActive: true },
+  { id: 2, nama: "Pah-chin", divisi: 3, isActive: false },
+  { id: 3, nama: "Mitsuya", divisi: 2, isActive: true },
+  { id: 4, nama: "Kazutora", divisi: 1, isActive: false }
+];
+
+/**
+ * TODO: 
+ * Buatlah variabel const bernama 'pasukanSiapTempur'.
+ * Gunakan teknik "Chaining" (Menyambung method):
+ * 1. Gunakan pasukanMentah.filter(...) untuk mencari yang isActive === true
+ * 2. Langsung sambung hasilnya dengan .map(...) untuk mengembalikan (return) string:
+ * "Anggota [nama] dari Divisi [divisi] siap tempur!"
+ */
+
+// Tulis kode Tuan di bawah ini:
+
+
+
+// Jika benar, console.log ini harus mencetak array berisi 2 kalimat untuk Baji dan Mitsuya.
+console.log(pasukanSiapTempur);
