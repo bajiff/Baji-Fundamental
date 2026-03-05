@@ -22,3 +22,4 @@ const apiKey = getAPI_KEY(user.token);
 const picture = getPictures(apiKey)
 
 console.log(user,picture);
+
