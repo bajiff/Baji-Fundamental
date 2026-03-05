@@ -18,6 +18,7 @@
 // })
 // console.log("Nunggu beli motor");
 // 
+
 const beliKuota = (duit = 0) => {
   return new Promise((resolve,reject) => {
     console.log("Proses pembelian kuota");
@@ -33,13 +34,26 @@ const beliKuota = (duit = 0) => {
   });
 };
 
+
+
+const daftarBelanjaan = [
+  beliKuota(5000), // Promise 1
+  beliKuota(10000), // Promise 2
+  beliKuota(7000)  // Promise 3
+];
+
+// Jalankan ketiganya BERSAMAAN!
+Promise.all(daftarBelanjaan)
+  .then(semuaHasil => {
+    console.log("SEMUA TRANSAKSI BERHASIL:", semuaHasil);
+  })
+  .catch(errorGagal => {
+    console.log("ADA YANG GAGAL SATU, SEMUA BATAL!", errorGagal.message);
+  });
+
+
 beliKuota(2000).then(onfulfilled => console.log("Berhasil " + onfulfilled))
 .catch(onrejected => console.log("Yahh gagal " + onrejected.message))
 
 beliKuota(5000).then(onfulfilled => console.log("Berhasil " + onfulfilled))
 .catch(onrejected => console.log("Yahh gagal " + onrejected.message))
-
-
-const daftarTanaman = [
-  
-]
