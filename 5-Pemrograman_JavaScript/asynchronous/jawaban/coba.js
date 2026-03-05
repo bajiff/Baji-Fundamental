@@ -38,3 +38,8 @@ beliKuota(2000).then(onfulfilled => console.log("Berhasil " + onfulfilled))
 
 beliKuota(5000).then(onfulfilled => console.log("Berhasil " + onfulfilled))
 .catch(onrejected => console.log("Yahh gagal " + onrejected.message))
+
+
+const daftarTanaman = [
+  
+]
