@@ -10,6 +10,8 @@ addOrder('Bob', [
   { name: 'Kopi', price: 10000 }
 ]);
 
+console.log("\n Setelah add Order \n");
+
 console.log(orders);
 
 /**
@@ -41,6 +43,7 @@ console.log(orders);
 updateOrderStatus(orders[0].id, 'Diproses');
 updateOrderStatus(orders[1].id, 'Selesai');
 
+console.log("\n Setelah Update Order \n");
 console.log(orders);
 
 /**
@@ -77,6 +80,8 @@ console.log(calculateTotalRevenue());
 
 
 deleteOrder(orders[0].id);
+
+console.log("\n Setelah di Delete \n");
 
 console.log(orders);
 
