@@ -7,7 +7,12 @@
  * - Memiliki method `listItems` untuk mengembalikan string yang merupakan informasi detail barang (dipanggil dari fungs `item.displayDetails()`).
  */
 
-class Inventory {}
+class Inventory {
+  constructor(items){
+    this.items = [items];
+  };
+  
+}
 
 
 // Jangan hapus kode di bawah ini!
