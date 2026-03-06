@@ -1,5 +1,5 @@
 import { sum } from "./index.js";
-import { test } from "node:test";
+import test from "node:test";
 import assert from "node:assert";
 
 test("Hasilnya 30",() => {
