@@ -10,23 +10,24 @@
  */
 
 class Item {
-  constructor(id = 0, name ="", quantity = 0, price = 0){
+  constructor( id = 0, name = "", quantity = 0, price = 0){
     this.id = id;
     this.name = name;
     this.quantity = quantity;
     this.price = price;
   };
-  
-  updateDetails(name, quantity, price){
+
+  updateDetails( name, quantity, price ){
     this.name = name;
     this.quantity = quantity;
     this.price = price;
   };
   
   displayDetails(){
-    return `ID: ${this.id}, Name: ${this.name}, Quantity: ${this.quantity}, Price: ${this.price}`
-  };
+    return `ID: ${this.id}, Quantity: ${this.quantity}, Price: ${this.price}`
+  }
+
 };
 
-// Jangan hapus kode di bawah ini!
+// ! Jangan hapus kode di bawah ini!
 export default Item;
