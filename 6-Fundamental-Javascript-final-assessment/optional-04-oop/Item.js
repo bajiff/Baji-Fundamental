@@ -29,5 +29,5 @@ class Item {
 
 };
 
-// ! Jangan hapus kode di bawah ini!
+// Jangan hapus kode di bawah ini!
 export default Item;
