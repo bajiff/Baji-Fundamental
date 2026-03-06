@@ -8,6 +8,23 @@
  */
 
 class Inventory {
+  constructor(){
+    this.items = [];
+  };
+
+  addItem(item){
+    this.items.push(item);
+  };
+  
+  removeItem(idItem){
+    this.items.filter((item) => item.id !== idItem);
+  };
+  
+  listItems(){
+    const result = this.items.map(item => item.displayDetails());
+    return result.join("\n");
+  };
+
 }
 
 
