@@ -8,4 +8,5 @@ formTambahLogistik.addEventListener("submit", (event) => {
   const outputInputJumlah = inputJumlah.value;
   result.innerText = (`Menambahkan : ${outputInputJumlah} unit ${outputInputBarang} ke dalam gudang`);
   console.log(`Menambahkan : ${outputInputJumlah} unit ${outputInputBarang} ke dalam gudang`)
+  formTambahLogistik.reset();
 })
