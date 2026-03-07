@@ -1,8 +1,8 @@
 <table>
   <tr>
     <td align="center">
-      <a href="https://res.cloudinary.com/daqhvvcoh/image/upload/v1771691778/Baji_cyf5fo.png" target="_blank">
-        <img src="https://res.cloudinary.com/daqhvvcoh/image/upload/v1771691778/Baji_cyf5fo.png" width="100" style="border-radius: 50%;" alt="Profile Picture"/>
+      <a href="https://res.cloudinary.com/daqhvvcoh/image/upload/c_auto,w_500/Pribadi_bz89nj.png" target="_blank">
+        <img src="https://res.cloudinary.com/daqhvvcoh/image/upload/c_auto,w_500/Pribadi_bz89nj.png" width="100%" style="border-radius: 50%;" alt="Profile Picture"/>
       </a>
     </td>
     <td>
