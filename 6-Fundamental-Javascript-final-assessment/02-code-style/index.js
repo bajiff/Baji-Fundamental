@@ -8,7 +8,7 @@ function getBookById(id) {
   const book = books[id];
 
   if (!book) {
-  return null;
+    return null;
   };
 
   return book.id;
