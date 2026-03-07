@@ -1,0 +1,13 @@
+{
+  "name": "7-newbie_frontend_web",
+  "version": "1.0.0",
+  "description": "Buat belajar BOM dan DOM hehew",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
