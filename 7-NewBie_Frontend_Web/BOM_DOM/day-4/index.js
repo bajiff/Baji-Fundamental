@@ -16,6 +16,25 @@ const renderProducts = () => {
     logisticList.append(newElement);
   });
   
+};
+
+const saveData = () => {
+  localStorage.setItem("LOGISTIC_DATA", JSON.stringify(products));
+};
+
+const loadDataFromStorage = () => {
+  const dataStorage = localStorage.getItem("LOGISTIC_DATA");
+  
+  if (dataStorage !== null) {
+    const parseDataStorage = JSON.parse(dataStorage);
+    
+    // ! Isi dari parseDataStorage itu array dan method dibawah ini sedang membongkar dengan cara spread ...parseDataStorage lalu di push dengan cara products.push();
+    products.push(...parseDataStorage);
+    
+    // * Setelah di push lalu dilanjutkan dengan merender ulang
+    renderProducts();
+  }
+  
 }
 
 formLogistic.addEventListener("submit", (e) => {
@@ -36,6 +55,10 @@ formLogistic.addEventListener("submit", (e) => {
   console.log(products);
   
   renderProducts();
+  
+  saveData();
 
   formLogistic.reset();
 });
+
+loadDataFromStorage();
