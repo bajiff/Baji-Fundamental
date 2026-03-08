@@ -24,10 +24,12 @@ const saveData = () => {
 
 const loadDataFromStorage = () => {
   const dataStorage = localStorage.getItem("LOGISTIC_DATA");
-  
+    console.log(typeof dataStorage)
   if (dataStorage !== null) {
     const parseDataStorage = JSON.parse(dataStorage);
     
+    console.log(typeof parseDataStorage,parseDataStorage)
+
     // ! Isi dari parseDataStorage itu array dan method dibawah ini sedang membongkar dengan cara spread ...parseDataStorage lalu di push dengan cara products.push();
     products.push(...parseDataStorage);
     
