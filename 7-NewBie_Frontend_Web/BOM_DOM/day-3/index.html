@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Day-3</title>
 </head>
 <body>
-  <script type="module" src="./index.js"></script>
+  <form id="formLogistic" action="">
+    <label for="product">Logistic</label>
+      <input type="text" name="product" id="product" value="" autofocus required placeholder="Fill out this product">
+    <label for="quantity">Quantity</label>
+      <input type="number" name="quantity" id="quantity" value="" required placeholder="Fill out this quantity">
+      <button>Submit</button>
+  </form>
+    <section>
+      <h1>Logistic List</h1>
+      <div id="logistic-list">
+
+      </div>
+    </section>
+  <script type="module" src="./index.js" defer></script>
 </body>
 </html>
