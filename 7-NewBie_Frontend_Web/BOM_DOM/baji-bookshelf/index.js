@@ -1,5 +1,8 @@
 let products = [];
 
+const copyright = `Hak Cipta © [ngambil dari tahun terbit] oleh [Ngambil dari nama penulis]
+Seluruh hak dilindungi undang-undang. Dilarang mengutip atau memperbanyak sebagian atau seluruh isi buku ini tanpa izin tertulis dari penerbit`
+
 const formLogistic = document.getElementById("form-logistic");
 
 const inputProduct = document.getElementById("product");
