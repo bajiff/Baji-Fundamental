@@ -5,15 +5,25 @@ const formLogistic = document.getElementById("form-logistic");
 const inputProduct = document.getElementById("product");
 const inputQuantity = document.getElementById("quantity");
 
-const logisticList = document.getElementById("logistic-list");
+const availableList = document.getElementById("available-list");
+
+const soldList = document.getElementById("sold-list");
 
 const renderProducts = () => {
-  logisticList.innerHTML = "";
+  availableList.innerHTML = "";
+  soldList.innerHTML = "";
 
   products.forEach((product) => {
     const newElement = document.createElement("p");
     newElement.innerHTML = `ID: ${product.id}\nName: ${product.name}\nQuantity: ${product.quantity}\nStatus: ${product.isSoldOut ? "Sold Out" : "Avaliable"}`
-    logisticList.append(newElement);
+
+    if (product.isSoldOut === true) {
+
+      soldList.append(newElement);
+
+    } else {
+      availableList.append(newElement);
+    };
   });
   
 };
