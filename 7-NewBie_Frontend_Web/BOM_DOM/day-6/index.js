@@ -1,4 +1,4 @@
-const products = [];
+let products = [];
 
 const formLogistic = document.getElementById("form-logistic");
 
@@ -14,13 +14,26 @@ const renderProducts = () => {
   soldList.innerHTML = "";
 
   products.forEach((product) => {
-    const newElement = document.createElement("p");
-    newElement.innerHTML = `ID: ${product.id}\nName: ${product.name}\nQuantity: ${product.quantity}\nStatus: ${product.isSoldOut ? "Sold Out" : "Avaliable"}`
+    const newElement = document.createElement("div");
+    newElement.innerHTML = `ID: ${product.id}<br>Name: ${product.name}<br>Quantity: ${product.quantity}<br>Status: ${product.isSoldOut ? "Sold Out" : "Avaliable"}`
+    
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    const toggleButton = document.createElement("button");
+    toggleButton.innerText = "Toggle";
+    
+    deleteButton.addEventListener("click",() => {
+      deleteProduct(product.id);
+    });
+
+    toggleButton.addEventListener("click", () => {
+      toggleStatus(product.id);
+    });
+    
+    newElement.append(deleteButton,toggleButton);
 
     if (product.isSoldOut === true) {
-
       soldList.append(newElement);
-
     } else {
       availableList.append(newElement);
     };
@@ -34,20 +47,29 @@ const saveData = () => {
 
 const loadDataFromStorage = () => {
   const dataStorage = localStorage.getItem("LOGISTIC_DATA");
-    console.log(typeof dataStorage)
   if (dataStorage !== null) {
     const parseDataStorage = JSON.parse(dataStorage);
-    
-    console.log(typeof parseDataStorage,parseDataStorage)
-
     // ! Isi dari parseDataStorage itu array dan method dibawah ini sedang membongkar dengan cara spread ...parseDataStorage lalu di push dengan cara products.push();
     products.push(...parseDataStorage);
     
     // * Setelah di push lalu dilanjutkan dengan merender ulang
     renderProducts();
-  }
+  };
   
-}
+};
+
+const deleteProduct = (id) => {
+  products = products.filter(product => product.id !== id);
+  saveData();
+  renderProducts();
+};
+
+const toggleStatus = (id) => {
+  const productID = products.find(product => product.id === id);
+  productID.isSoldOut = (!productID.isSoldOut);
+  saveData();
+  renderProducts();
+};
 
 formLogistic.addEventListener("submit", (e) => {
   e.preventDefault();
