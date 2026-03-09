@@ -11,6 +11,13 @@
   text-decoration: none;
 }
 
+body {
+  /* background-color: ; */
+  background-color: #EAFBFF;
+  color: white;
+
+}
+
 header {
   display: flex;
   align-items: center;
