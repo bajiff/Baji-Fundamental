@@ -1,6 +1,23 @@
 /* ? Font Family Rubik */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --primary-color :#ccff00;
+  --primary-color-hover : #c1ef07;
+  --light-mode-background-color :#f8f9fa;
+  --light-mode-text-color :  #212529;
+  --light-mode-background-card-color: var(--light-mode-background-color)fff;
+  
+  --dark-mode-background-color: #121212;
+  --dark-mode-text-color: #f8f9fa;
+  --dark-mode-background-card-color:#1e1e1e;
+  --transition: all 0.3s ease;
+  --placeholder-color: #96b12b;
+}
+
+::selection {
+  color: var(--primary-color-hover);
+}
 *{
   padding: 0;
   margin: 0;
@@ -13,6 +30,7 @@
 body {
   /* background-color: ; */
   background-color: #EAFBFF;
+  transition: var(--transition);
 }
 
 header {
@@ -20,6 +38,44 @@ header {
   align-items: center;
   justify-content: center;
   padding: 40px;
+}
+
+#nav-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#h1-header {
+  padding: 10px;
+  color: var(--light-mode-text-color);
+  border-radius: 10px 0 10px 0;
+  border: 3px solid var(--dark-mode-background-color);
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+#h1-header:hover {
+  transform: scale(1.1); 
+}
+
+
+#ul-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media {
+  color: var(--light-mode-text-color);
+  transition: var(--transition);
+}
+
+.social-media:hover {
+  transform: scale(1.5);
+  color: var(--primary-color);
 }
 
 main {
@@ -33,18 +89,69 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: blue;
+  border-radius: 10px ;
+  border: 3px solid var(--dark-mode-background-color);
+  padding: 25px 25px;
+  gap: 20px;
 }
+
+
 
 #form-input-section {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  background-color: red;
-  max-width: inherit;
   width: 100%;
   gap: 20px;
+}
+
+.div-input {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: inherit;
+  margin-top: 5px;
+  width: 100%;
+  gap: 10px;
+}
+
+.text-input {
+  font-size: 20px;
+}
+
+.required {
+  color: red;
+}
+
+.input-form {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+input[placeholder]::placeholder {
+color: var(--placeholder-color);
+}
+
+
+
+/* 6 */
+.submit-button {
+  padding: 10px 15px;
+  border-radius: 10px 0 10px 0;
+  border: 3px solid var(--light-mode-text-color);
+  background-color: var(--primary-color);
+  color: var(--light-mode-text-color);
+  font-weight: 600;
+  transition: var(--transition);
+
+}
+
+.submit-button:hover {
+  transform: scale(1.1); 
+  color: var(--light-mode-text-color);
+  background: var(--primary-color-hover);
 }
 
 #search-section {

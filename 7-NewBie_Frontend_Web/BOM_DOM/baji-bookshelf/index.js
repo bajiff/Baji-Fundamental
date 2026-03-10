@@ -15,6 +15,7 @@ const inputPublicationYear = document.getElementById("publication-year");
 const inputPlaceOfPublication = document.getElementById("place-of-publication");
 const inputEditor = document.getElementById("editor");
 const inputIlustrator = document.getElementById("ilustrator");
+const inputIsRead = document.getElementById("isRead");
 
 const formSearchSeaction = document.getElementById("form-search-section");
 
@@ -36,6 +37,7 @@ const renderBooks = (data = books) => {
     deleteButton.innerText = "Delete";
     const toggleButton = document.createElement("button");
     toggleButton.innerText = "Toggle";
+    const lineBreakElement = document.createElement("br");
     
     deleteButton.addEventListener("click",() => {
       deleteProduct(book.id);
@@ -45,7 +47,7 @@ const renderBooks = (data = books) => {
       toggleStatus(book.id);
     });
     
-    newElement.append(deleteButton,toggleButton);
+    newElement.append(lineBreakElement,deleteButton,toggleButton);
 
     if (book.isRead === true) {
       unreadList.append(newElement);
@@ -87,18 +89,31 @@ const toggleStatus = (id) => {
   renderBooks();
 };
 
+const duplicateCheck = (isbn) => {
+  const filteredDuplicate = books.filter(book => {
+    if (book.isbn === isbn) {
+      alert(`Sorry nomor ISBN ${book.isbn} sudah tersedia mohon input nomor yang lain`);
+      return false;
+    } else {
+      return true;
+    };
+  });
+  return filteredDuplicate;
+};
+
 formInputSection.addEventListener("submit", (e) => {
   e.preventDefault();
   const generateUID = Date.now();
   const titleValue = inputTitle.value;
-  const subTitleValue = inputSubTitle.value;
+  const subTitleValue = (!inputSubTitle.value ? "Empty" : inputSubTitle.value);
   const authorValue = inputAuthor.value;
   const publisherValue = inputPublisher.value;
-  const isbnValue = parseInt(inputIsbn.value);
+  const isbnValue =  inputIsbn.value;
   const publicationYearValue = parseInt(inputPublicationYear.value);
   const placeOfPublicationValue = inputPlaceOfPublication.value;
-  const editorValue = inputEditor.value;
-  const ilustratorValue = inputIlustrator.value;
+  const editorValue = (!inputEditor.value ? "Empty" : inputEditor.value);
+  const ilustratorValue = (!inputIlustrator.value ? "Empty" : inputIlustrator.value);
+  const isReadValue = inputIsRead.value;
   
   const newBook = {
     id: generateUID,
@@ -111,7 +126,7 @@ formInputSection.addEventListener("submit", (e) => {
     placeOfPublication: placeOfPublicationValue,
     editor: editorValue,
     ilustrator: ilustratorValue,
-    isRead: false
+    isRead: isReadValue
   };
 
   books.push(newBook);
