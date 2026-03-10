@@ -4,6 +4,7 @@ const copyright = `Hak Cipta © [ngambil dari tahun terbit] oleh [Ngambil dari n
 Seluruh hak dilindungi undang-undang. Dilarang mengutip atau memperbanyak sebagian atau seluruh isi buku ini tanpa izin tertulis dari penerbit`
 
 const formInputSection = document.getElementById("form-input-section");
+const formSearchSection = document.getElementById("form-search-section");
 
 const inputTitle = document.getElementById("title");
 const inputSubTitle = document.getElementById("sub-title");
@@ -15,7 +16,7 @@ const inputPlaceOfPublication = document.getElementById("place-of-publication");
 const inputEditor = document.getElementById("editor");
 const inputIlustrator = document.getElementById("ilustrator");
 
-const formSearchSeaction = document.getElementById("form-search-sectoin");
+const formSearchSeaction = document.getElementById("form-search-section");
 
 const inputSearchTitle = document.getElementById("search-title");
 
@@ -55,6 +56,7 @@ const renderBooks = (data = books) => {
   
 };
 
+
 const saveData = () => {
   localStorage.setItem("LOGISTIC_DATA", JSON.stringify(books));
 };
@@ -91,6 +93,7 @@ formInputSection.addEventListener("submit", (e) => {
   const titleValue = inputTitle.value;
   const subTitleValue = inputSubTitle.value;
   const authorValue = inputAuthor.value;
+  const publisherValue = inputPublisher.value;
   const isbnValue = parseInt(inputIsbn.value);
   const publicationYearValue = parseInt(inputPublicationYear.value);
   const placeOfPublicationValue = inputPlaceOfPublication.value;
@@ -102,6 +105,7 @@ formInputSection.addEventListener("submit", (e) => {
     title: titleValue,
     subTitle: subTitleValue,
     author: authorValue,
+    publisher: publisherValue,
     isbn: isbnValue,
     publicationYear: publicationYearValue,
     placeOfPublication: placeOfPublicationValue,
@@ -119,5 +123,18 @@ formInputSection.addEventListener("submit", (e) => {
 
   formInputSection.reset();
 });
+
+formSearchSeaction.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const keyword = inputSearchTitle.value.toLowerCase();
+
+  const filteredBook = books.filter(book => book.title.toLowerCase().includes(keyword));
+  
+  renderBooks(filteredBook);
+  saveData();
+
+})
+
 
 loadDataFromStorage();

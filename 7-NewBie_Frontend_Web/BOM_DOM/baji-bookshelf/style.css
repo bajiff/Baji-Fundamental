@@ -29,20 +29,22 @@ main {
 }
 
 #input-section {
-  padding: 20px;
-  border: 1 solid red;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: blue;
 }
 
 #form-input-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: space-between;
   flex-direction: column;
-  gap: 10px;
+  background-color: red;
+  max-width: inherit;
+  width: 100%;
+  gap: 20px;
 }
 
 #search-section {
@@ -57,6 +59,16 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
+}
+
+#read-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
 }
 
 #bookshelf-unread-section {
@@ -64,4 +76,13 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
+}
+
+#unread-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
