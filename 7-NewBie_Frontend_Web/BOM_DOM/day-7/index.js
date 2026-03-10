@@ -2,18 +2,33 @@ let products = [];
 
 const formLogistic = document.getElementById("form-logistic");
 
+const formSearchSection = document.getElementById("form-search-section");
+
 const inputProduct = document.getElementById("product");
 const inputQuantity = document.getElementById("quantity");
+
+const inputSearchSection = document.getElementById("input-search-section");
 
 const availableList = document.getElementById("available-list");
 
 const soldList = document.getElementById("sold-list");
 
-const renderProducts = () => {
+
+formSearchSection.addEventListener("submit", (e) =>{
+  e.preventDefault();
+
+  const keyword = inputSearchSection.value.toLowerCase();
+
+  const filterProduct = products.filter(product => product.name.toLowerCase().includes(keyword));
+  
+  renderProducts(filterProduct);
+})
+
+const renderProducts = (data = products) => {
   availableList.innerHTML = "";
   soldList.innerHTML = "";
 
-  products.forEach((product) => {
+  data.forEach((product) => {
     const newElement = document.createElement("div");
     newElement.innerHTML = `ID: ${product.id}<br>Name: ${product.name}<br>Quantity: ${product.quantity}<br>Status: ${product.isSoldOut ? "Sold Out" : "Available"}`
     

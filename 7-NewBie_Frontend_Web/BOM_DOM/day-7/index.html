@@ -7,24 +7,40 @@
   <title>Day-7</title>
 </head>
 <body>
+  <header><h1>Baji Bookshelf</h1></header>
+  
+  <main>
+    <section id="input-section">
+      <form id="form-logistic" action="">
+        <label for="product">Product</label>
+          <input id="product" type="text" name="product" value="" autofocus required>
+        <label for="quantity">Quantity</label>
+          <input id="quantity" type="number" name="quantity" value="" required>
+        <button>Submit</button>
+      </form>
+    </section>
 
-  <form id="form-logistic" action="">
-    <label for="product">Product</label>
-      <input id="product" type="text" name="product" value="" autofocus required>
-    <label for="quantity">Quantity</label>
-      <input id="quantity" type="number" name="quantity" value="" required>
-    <button>Submit</button>
-  </form>
+    <section id="search-section">
+      <form id="form-search-section" action="">
+        <label for="input-search-section">
+          Cari Logistik:
+        </label>
+        <input type="text" id="input-search-section" name="input-search-section" value="" placeholder="Ketik nama barang...">
+        <button>Search</button>
+      </form>
+    </section>
 
-  <section >
-    <h1>Available List</h1>
-    <div id="available-list"></div>
-  </section>
+    <section >
+      <h1>Available List</h1>
+      <div id="available-list"></div>
+    </section>
 
-  <section >
-    <h1>Soldout List</h1>
-    <div id="sold-list"></div>
-  </section>
+    <section >
+      <h1>Soldout List</h1>
+      <div id="sold-list"></div>
+    </section>
+
+  </main>
     
   <script type="module" src="index.js" defer></script>
 </body>
