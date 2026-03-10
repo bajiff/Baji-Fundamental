@@ -9,23 +9,27 @@ const inputTitle = document.getElementById("title");
 const inputSubTitle = document.getElementById("sub-title");
 const inputAuthor = document.getElementById("author");
 const inputPublisher = document.getElementById("publisher");
-const InputIsbn = document.getElementById("isbn");
+const inputIsbn = document.getElementById("isbn");
 const inputPublicationYear = document.getElementById("publication-year");
 const inputPlaceOfPublication = document.getElementById("place-of-publication");
 const inputEditor = document.getElementById("editor");
 const inputIlustrator = document.getElementById("ilustrator");
 
+const formSearchSeaction = document.getElementById("form-search-sectoin");
+
+const inputSearchTitle = document.getElementById("search-title");
+
 const readList = document.getElementById("read-list");
 
 const unreadList = document.getElementById("unread-list");
 
-const renderProducts = () => {
+const renderBooks = (data = books) => {
   readList.innerHTML = "";
   unreadList.innerHTML = "";
 
-  books.forEach((product) => {
+  data.forEach((book) => {
     const newElement = document.createElement("div");
-    newElement.innerHTML = `ID: ${product.id}<br>Name: ${product.name}<br>Quantity: ${product.quantity}<br>Status: ${product.isSoldOut ? "Sold Out" : "Available"}`
+    newElement.innerHTML = `ID: ${book.id}<br>Title: ${book.title}<br>Sub Title: ${book.subTitle}<br>Author: ${book.author}<br>Publisher: ${book.publisher}<br>ISBN: ${book.isbn}<br>Publication Year: ${book.publicationYear}<br>Place of Publication: ${book.placeOfPublication}<br>Editor: ${book.editor}<br>Ilustrator: ${book.ilustrator}<br>Status: ${book.isRead ? "Read" : "Unread"}`
     
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete";
@@ -33,16 +37,16 @@ const renderProducts = () => {
     toggleButton.innerText = "Toggle";
     
     deleteButton.addEventListener("click",() => {
-      deleteProduct(product.id);
+      deleteProduct(book.id);
     });
 
     toggleButton.addEventListener("click", () => {
-      toggleStatus(product.id);
+      toggleStatus(book.id);
     });
     
     newElement.append(deleteButton,toggleButton);
 
-    if (product.isSoldOut === true) {
+    if (book.isRead === true) {
       unreadList.append(newElement);
     } else {
       readList.append(newElement);
@@ -63,42 +67,53 @@ const loadDataFromStorage = () => {
     books.push(...parseDataStorage);
     
     // * Setelah di push lalu dilanjutkan dengan merender ulang
-    renderProducts();
+    renderBooks();
   };
   
 };
 
 const deleteProduct = (id) => {
-  books = books.filter(product => product.id !== id);
+  books = books.filter(book => book.id !== id);
   saveData();
-  renderProducts();
+  renderBooks();
 };
 
 const toggleStatus = (id) => {
-  const productID = books.find(product => product.id === id);
-  productID.isSoldOut = (!productID.isSoldOut);
+  const productID = books.find(book => book.id === id);
+  productID.isRead = (!productID.isRead);
   saveData();
-  renderProducts();
+  renderBooks();
 };
 
 formInputSection.addEventListener("submit", (e) => {
   e.preventDefault();
   const generateUID = Date.now();
+  const titleValue = inputTitle.value;
+  const subTitleValue = inputSubTitle.value;
+  const authorValue = inputAuthor.value;
+  const isbnValue = parseInt(inputIsbn.value);
+  const publicationYearValue = parseInt(inputPublicationYear.value);
+  const placeOfPublicationValue = inputPlaceOfPublication.value;
+  const editorValue = inputEditor.value;
+  const ilustratorValue = inputIlustrator.value;
   
-  const productValue = inputTitle.value;
-  const quantityValue = parseInt(inputSubTitle.value);
-  
-  const newProduct = {
+  const newBook = {
     id: generateUID,
-    name: productValue,
-    quantity: quantityValue,
-    isSoldOut: false
+    title: titleValue,
+    subTitle: subTitleValue,
+    author: authorValue,
+    isbn: isbnValue,
+    publicationYear: publicationYearValue,
+    placeOfPublication: placeOfPublicationValue,
+    editor: editorValue,
+    ilustrator: ilustratorValue,
+    isRead: false
   };
 
-  books.push(newProduct);
+  books.push(newBook);
   console.log(books);
   
-  renderProducts();
+  renderBooks();
   
   saveData();
 
