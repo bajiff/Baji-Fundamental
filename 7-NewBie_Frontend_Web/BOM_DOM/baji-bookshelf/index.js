@@ -31,16 +31,25 @@ const renderBooks = (data = books) => {
 
   data.forEach((book) => {
     const newElement = document.createElement("div");
+    newElement.classList.add("card-book");
     newElement.innerHTML = `ID: ${book.id}<br>Title: ${book.title}<br>Sub Title: ${book.subTitle}<br>Author: ${book.author}<br>Publisher: ${book.publisher}<br>ISBN: ${book.isbn}<br>Publication Year: ${book.publicationYear}<br>Place of Publication: ${book.placeOfPublication}<br>Editor: ${book.editor}<br>Ilustrator: ${book.ilustrator}<br>Status: ${book.isRead ? "Read" : "Unread"}`
     
     const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-button")
     deleteButton.innerText = "Delete";
+
     const toggleButton = document.createElement("button");
+    toggleButton.classList.add("toggle-button")
     toggleButton.innerText = "Toggle";
     const lineBreakElement = document.createElement("br");
     
     deleteButton.addEventListener("click",() => {
-      deleteProduct(book.id);
+      const confirmBookDelete = confirm(`Yakin mau menghapus ${book.title}`)
+      if (confirmBookDelete) {
+        deleteProduct(book.id);
+      } else {
+        return false;
+      }
     });
 
     toggleButton.addEventListener("click", () => {
@@ -50,9 +59,9 @@ const renderBooks = (data = books) => {
     newElement.append(lineBreakElement,deleteButton,toggleButton);
 
     if (book.isRead === true) {
-      unreadList.append(newElement);
-    } else {
       readList.append(newElement);
+    } else {
+      unreadList.append(newElement);
     };
   });
   
@@ -113,7 +122,7 @@ formInputSection.addEventListener("submit", (e) => {
   const placeOfPublicationValue = inputPlaceOfPublication.value;
   const editorValue = (!inputEditor.value ? "Empty" : inputEditor.value);
   const ilustratorValue = (!inputIlustrator.value ? "Empty" : inputIlustrator.value);
-  const isReadValue = inputIsRead.value;
+  const isReadValue = inputIsRead.checked;
   
   const newBook = {
     id: generateUID,

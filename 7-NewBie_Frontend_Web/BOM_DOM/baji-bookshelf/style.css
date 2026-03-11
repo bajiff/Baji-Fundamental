@@ -7,12 +7,19 @@
   --light-mode-background-color :#f8f9fa;
   --light-mode-text-color :  #212529;
   --light-mode-background-card-color: var(--light-mode-background-color)fff;
+  --placeholder-color: #96b12b;
   
   --dark-mode-background-color: #121212;
   --dark-mode-text-color: #f8f9fa;
   --dark-mode-background-card-color:#1e1e1e;
+
   --transition: all 0.3s ease;
-  --placeholder-color: #96b12b;
+  --delete-button-background-color: #FF073A;
+  --delete-button-box-shadow:0 0 10px #FF073A;
+  --delete-button-background-color-hover: #ff0000;
+
+  --toggle-button-box-shadow:0 0 10px #c1ef07;
+
 }
 
 ::selection {
@@ -76,6 +83,7 @@ header {
 .social-media:hover {
   transform: scale(1.5);
   color: var(--primary-color);
+  box-shadow: var(--toggle-button-box-shadow);
 }
 
 main {
@@ -91,7 +99,7 @@ main {
   flex-direction: column;
   border-radius: 10px ;
   border: 3px solid var(--dark-mode-background-color);
-  padding: 25px 25px;
+  padding: 25px;
   gap: 20px;
 }
 
@@ -108,10 +116,7 @@ main {
 
 .div-input {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  max-width: inherit;
-  margin-top: 5px;
   width: 100%;
   gap: 10px;
 }
@@ -134,9 +139,10 @@ input[placeholder]::placeholder {
 color: var(--placeholder-color);
 }
 
+button {
+  cursor: pointer;
+}
 
-
-/* 6 */
 .submit-button {
   padding: 10px 15px;
   border-radius: 10px 0 10px 0;
@@ -145,28 +151,62 @@ color: var(--placeholder-color);
   color: var(--light-mode-text-color);
   font-weight: 600;
   transition: var(--transition);
-
 }
 
 .submit-button:hover {
   transform: scale(1.1); 
   color: var(--light-mode-text-color);
-  background: var(--primary-color-hover);
+  background-color: var(--primary-color);
+  box-shadow: var(--toggle-button-box-shadow);
 }
 
 #search-section {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 10px ;
+  border: 3px solid var(--dark-mode-background-color);
+  padding: 25px;
+  width: 100%;
+  gap: 20px;
 }
 
+#form-search-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+#div-search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#search-title {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+
+
 #bookshelf-read-section {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  padding: 25px;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid var(--dark-mode-background-color);
 }
 
 #read-list {
@@ -174,16 +214,61 @@ color: var(--placeholder-color);
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: inherit;
   gap: 20px;
+  border-radius: 10px;
+}
 
+.card-book {
+  padding: 25px;
+  width: inherit;
+  border-radius: 10px;
+  border: 3px solid var(--dark-mode-background-color);
+  font-size: 18px;
+}
+.delete-button{
+  padding: 10px 20px;
+  border-radius: 10px 0 10px 0;
+  border: 3px solid var(--light-mode-text-color);
+  background-color: var(--delete-button-background-color);
+  font-weight: 600;
+  color: var(--light-mode-background-color);
+  transition: var(--transition);
+  margin: 10px 10px 0 0;
+}
+
+.delete-button:hover {
+  transform: scale(1.1);
+  background-color: var(--delete-button-background-color-hover);
+  box-shadow: var(--delete-button-box-shadow);
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  border-radius: 10px 0 10px 0;
+  font-weight: 600;
+  border: 3px solid var(--light-mode-text-color);
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+  box-shadow: var(--toggle-button-box-shadow);
 }
 
 #bookshelf-unread-section {
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  padding: 25px;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid var(--dark-mode-background-color);
 }
 
 #unread-list {
@@ -191,5 +276,7 @@ color: var(--placeholder-color);
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: inherit;
   gap: 20px;
+  border-radius: 10px;
 }
