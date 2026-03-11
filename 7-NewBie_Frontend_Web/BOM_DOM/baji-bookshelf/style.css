@@ -1,30 +1,46 @@
-/* ? Font Family Rubik */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --primary-color :#ccff00;
   --primary-color-hover : #c1ef07;
-  --light-mode-background-color :#f8f9fa;
-  --light-mode-text-color :  #212529;
-  --light-mode-background-card-color: var(--light-mode-background-color)fff;
+  --background-color :#f8f9fa;
+  --text-color :#212529;
   --placeholder-color: #96b12b;
-  
-  --dark-mode-background-color: #121212;
-  --dark-mode-text-color: #f8f9fa;
-  --dark-mode-background-card-color:#1e1e1e;
-
-  --transition: all 0.3s ease;
+  --selection-color: #96b12b;
+  --selection-background-color: #000000;
+  --border-color: #121212;
+  --section-background-color: #f8f9fa;
+  --button-color: #121212;
   --delete-button-background-color: #FF073A;
   --delete-button-box-shadow:0 0 10px #FF073A;
   --delete-button-background-color-hover: #ff0000;
-
   --toggle-button-box-shadow:0 0 10px #c1ef07;
+  --transition: all 0.3s ease;
+}
 
+[data-theme="dark"] {
+  --primary-color :#ccff00;
+  --primary-color-hover : #c1ef07;
+  --background-color: #3f3f3f;
+  --text-color :#121212;
+  --h1-text-color : #121212;
+  --placeholder-color: #96b12b;
+  --selection-color: #000000;
+  --selection-background-color: #ffffff;
+  --border-color: #f8f9fa;
+  --button-color: #f8f9fa;
+  --section-background-color: #a6cb14;
+  --delete-button-background-color: #FF073A;
+  --delete-button-box-shadow:0 0 10px #FF073A;
+  --delete-button-background-color-hover: #ff0000;
+  --toggle-button-box-shadow:0 0 10px #c1ef07;
+  --transition: all 0.3s ease;
 }
 
 ::selection {
-  color: var(--primary-color-hover);
+  color: var(--selection-color);
+  background-color: var(--selection-background-color);
 }
+
 *{
   padding: 0;
   margin: 0;
@@ -35,9 +51,9 @@
 }
 
 body {
-  /* background-color: ; */
-  background-color: #EAFBFF;
-  transition: var(--transition);
+  background-color: var(--background-color);
+  transition: background-color .3s ease, color .3s ease;
+  color: var(--text-color);
 }
 
 header {
@@ -56,9 +72,9 @@ header {
 
 #h1-header {
   padding: 10px;
-  color: var(--light-mode-text-color);
+  color: var(--h1-text-color);
   border-radius: 10px 0 10px 0;
-  border: 3px solid var(--dark-mode-background-color);
+  border: 3px solid var(--border-color);
   background-color: var(--primary-color);
   transition: var(--transition);
 }
@@ -76,16 +92,43 @@ header {
 }
 
 .social-media {
-  color: var(--light-mode-text-color);
-  transition: var(--transition);
+  color: var(--button-color); /* Warna teks awal */
+  text-decoration: none;
+  font-size: 24px;
+  transition: all 0.3s ease; /* Transisi halus */
 }
 
 .social-media:hover {
+  /* text-shadow: horizontal vertical blur warna */
   transform: scale(1.5);
-  color: var(--primary-color);
-  box-shadow: var(--toggle-button-box-shadow);
+  text-shadow: 
+    0 0 5px var(--background-color), 
+    0 0 10px var(--background-color), 
+    0 0 20px var(--primary-color), /* Warna cahaya */
+    0 0 30px var(--primary-color),
+    0 0 40px var(--primary-color);
+  color: #fff;
 }
 
+#theme-button {
+  color: var(--button-color); /* Warna teks awal */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#theme-button:hover {
+  /* text-shadow: horizontal vertical blur warna */
+  transform: scale(1.5);
+  text-shadow: 
+    0 0 5px var(--background-color), 
+    0 0 10px var(--background-color), 
+    0 0 20px var(--primary-color), /* Warna cahaya */
+    0 0 30px var(--primary-color),
+    0 0 40px var(--primary-color);
+  color: #fff;
+}
 main {
   max-width: 700px;
   width: 80%;
@@ -98,9 +141,11 @@ main {
   justify-content: center;
   flex-direction: column;
   border-radius: 10px ;
-  border: 3px solid var(--dark-mode-background-color);
-  padding: 25px;
+  border: 3px solid var(--border-color);
+  padding: 30px 50px;
   gap: 20px;
+  transition: var(--transition);
+  background-color: var(--section-background-color);
 }
 
 
@@ -110,6 +155,7 @@ main {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  font-weight: 600;
   width: 100%;
   gap: 20px;
 }
@@ -139,6 +185,17 @@ input[placeholder]::placeholder {
 color: var(--placeholder-color);
 }
 
+.div-input-isRead {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+#isRead {
+  transform: scale(2);
+}
+
 button {
   cursor: pointer;
 }
@@ -146,16 +203,15 @@ button {
 .submit-button {
   padding: 10px 15px;
   border-radius: 10px 0 10px 0;
-  border: 3px solid var(--light-mode-text-color);
+  border: 3px solid var(--text-color);
   background-color: var(--primary-color);
-  color: var(--light-mode-text-color);
   font-weight: 600;
   transition: var(--transition);
 }
 
 .submit-button:hover {
   transform: scale(1.1); 
-  color: var(--light-mode-text-color);
+  color: var(--text-color);
   background-color: var(--primary-color);
   box-shadow: var(--toggle-button-box-shadow);
 }
@@ -167,10 +223,11 @@ button {
   justify-content: center;
   flex-direction: column;
   border-radius: 10px ;
-  border: 3px solid var(--dark-mode-background-color);
-  padding: 25px;
+  border: 3px solid var(--border-color);
+  padding: 30px 50px;
   width: 100%;
   gap: 20px;
+  background-color: var(--section-background-color);
 }
 
 #form-search-section {
@@ -183,17 +240,33 @@ button {
 
 #div-search {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
+  gap: 10px;
 }
 
 #search-title {
   padding: 10px 20px;
   border-radius: 10px;
   font-size: 16px;
+  width: 100%;
 }
 
+#search-button {
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px 0 10px 0;
+  border: 3px solid var(--text-color);
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
 
+#search-button:hover {
+  transform: scale(1.1);
+  color: var(--text-color);
+  box-shadow: var(--toggle-button-box-shadow);
+}
 
 #bookshelf-read-section {
   margin-top: 50px;
@@ -202,11 +275,12 @@ button {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  padding: 25px;
+  padding: 30px 50px;
   max-width: 100%;
   width: 100%;
   border-radius: 10px;
-  border: 3px solid var(--dark-mode-background-color);
+  border: 3px solid var(--border-color);
+  background-color: var(--section-background-color);
 }
 
 #read-list {
@@ -220,19 +294,21 @@ button {
 }
 
 .card-book {
-  padding: 25px;
+  padding: 30px 50px;
   width: inherit;
   border-radius: 10px;
-  border: 3px solid var(--dark-mode-background-color);
+  border: 3px solid var(--border-color);
   font-size: 18px;
+  font-weight: 600;
+  line-height: .6cm;
 }
 .delete-button{
   padding: 10px 20px;
   border-radius: 10px 0 10px 0;
-  border: 3px solid var(--light-mode-text-color);
+  border: 3px solid var(--text-color);
   background-color: var(--delete-button-background-color);
   font-weight: 600;
-  color: var(--light-mode-background-color);
+  color: var(--background-color);
   transition: var(--transition);
   margin: 10px 10px 0 0;
 }
@@ -241,19 +317,22 @@ button {
   transform: scale(1.1);
   background-color: var(--delete-button-background-color-hover);
   box-shadow: var(--delete-button-box-shadow);
+  color: var(--text-color);
 }
 
 .toggle-button {
   padding: 10px 20px;
   border-radius: 10px 0 10px 0;
   font-weight: 600;
-  border: 3px solid var(--light-mode-text-color);
+  border: 3px solid var(--text-color);
   background-color: var(--primary-color);
   transition: var(--transition);
 }
 
 .toggle-button:hover {
   transform: scale(1.1);
+  background-color: var(--primary-color);
+  color: var(--text-color);
   box-shadow: var(--toggle-button-box-shadow);
 }
 
@@ -264,11 +343,12 @@ button {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  padding: 25px;
+  padding: 30px 50px;
   max-width: 100%;
   width: 100%;
   border-radius: 10px;
-  border: 3px solid var(--dark-mode-background-color);
+  border: 3px solid var(--border-color);
+  background-color: var(--section-background-color);
 }
 
 #unread-list {
@@ -279,4 +359,11 @@ button {
   width: inherit;
   gap: 20px;
   border-radius: 10px;
+}
+
+footer {
+  max-width: 100%;
+  width: 80%;
+  margin: 2.6% auto;
+  text-align: center;
 }

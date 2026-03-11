@@ -10,11 +10,30 @@
 <body>
   <header>
     <nav id="nav-header">
-        <h1 id="h1-header">Baji Bookshelf</h1>
+      <h1 id="h1-header">Baji Bookshelf</h1>
       <ul id="ul-nav">
-        <li><a target="_blank" class="" href="https://github.com/bajiff" title="Akun Github Baji"><i class="fa-brands social-media fa-2x fa-github"></i></a></li>
-        <li><a target="_blank" class="" href="https://www.linkedin.com/in/bagus-aji-fernando-466347286/" title="Akun LinkedIn Baji"><i class="fa-brands social-media fa-2x fa-linkedin"></i></a></li>
-        <li><a target="_blank" class="" href="https://instagram.com/_bajif" title="Akun Instagram Baji"><i class="fa-brands social-media fa-2x fa-instagram"></i></a></li>
+        <li>
+          <a target="_blank" class="" href="https://github.com/bajiff" title="Akun Github Baji">
+            <i class="fa-brands social-media fa-2x fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" class="" href="https://www.linkedin.com/in/bagus-aji-fernando-466347286/" title="Akun LinkedIn Baji">
+            <i class="fa-brands social-media fa-2x fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" class="" href="https://instagram.com/_bajif" title="Akun Instagram Baji">
+            <i class="fa-brands social-media fa-2x fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <button id="theme-button" class="theme-button" title="Toggle Mode">
+            <i id="theme-icon" class="fa-solid fa-moon fa-xl"></i>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -32,7 +51,7 @@
         </div>
 
         <div class="div-input">
-        <label class="text-input" for="sub-title">Sub Title <span>(Optional)</span></label>
+        <label class="text-input" for="sub-title">Sub Title</label>
           <input class="input-form" id="sub-title" type="text" name="sub-title" value="" placeholder="Input Sub Title...">
         </div>
 
@@ -63,17 +82,17 @@
         </div>
 
         <div class="div-input">
-        <label class="text-input" for="editor">Editor <span>(Optional)</span></label>
+        <label class="text-input" for="editor">Editor</label>
           <input class="input-form" id="editor" type="text" name="editor" value="" placeholder="Input Editor Name...">
         </div>
 
         <div class="div-input">
-        <label class="text-input" for="ilustrator">Ilustrator <span>(Optional)</span></label>
+        <label class="text-input" for="ilustrator">Ilustrator</label>
           <input class="input-form" id="ilustrator" type="text" name="ilustrator" value="" placeholder="Input Ilustrator Name...">
         </div>
 
         <div class="div-input-isRead">
-        <label class="text-input" for="isRead">Is Read? <span>(Optional)</span></label>
+        <label class="text-input" for="isRead">Is Read?</label>
           <input class="input-form" id="isRead" type="checkbox" name="isRead" value="" placeholder="Input">
         </div>
 
@@ -87,6 +106,7 @@
         <form id="form-search-section" action="">
           <div id="div-search">
             <input type="text" name="search-title" id="search-title" placeholder="Search title...">
+            <button id="search-button">Search</button>
           </div>
         </form>
     </section>
@@ -106,6 +126,10 @@
     
   </main>
     
+  <footer>
+    <p>&copy; 2025 Baji Bookshelf. All rights reserved.</p>
+  </footer>
+
   <!-- ! Javascript File -->
   <script type="module" src="index.js" defer></script>
 

@@ -1,7 +1,8 @@
 let books = [];
 
-const copyright = `Hak Cipta © [ngambil dari tahun terbit] oleh [Ngambil dari nama penulis]
-Seluruh hak dilindungi undang-undang. Dilarang mengutip atau memperbanyak sebagian atau seluruh isi buku ini tanpa izin tertulis dari penerbit`
+const themeButton = document.getElementById("theme-button")
+const themeIcon = document.getElementById("theme-icon");
+const htmlElement = document.documentElement;
 
 const formInputSection = document.getElementById("form-input-section");
 const formSearchSection = document.getElementById("form-search-section");
@@ -16,14 +17,37 @@ const inputPlaceOfPublication = document.getElementById("place-of-publication");
 const inputEditor = document.getElementById("editor");
 const inputIlustrator = document.getElementById("ilustrator");
 const inputIsRead = document.getElementById("isRead");
+const submitButton = document.getElementsByClassName("submit-button");
 
 const formSearchSeaction = document.getElementById("form-search-section");
-
 const inputSearchTitle = document.getElementById("search-title");
-
 const readList = document.getElementById("read-list");
-
 const unreadList = document.getElementById("unread-list");
+
+const savedTheme = localStorage.getItem("theme");
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const currentTheme = savedTheme ? savedTheme : (systemPrefersDark ? "dark" : "light");
+
+const toggleTheme = (theme) => {
+  htmlElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme",theme);
+
+  if(theme === "dark") {
+    themeIcon.classList.replace("fa-moon", "fa-sun");
+  } else {
+    themeIcon.classList.replace("fa-sun", "fa-moon");
+  };
+};
+
+toggleTheme(currentTheme);
+
+themeButton.addEventListener("click", () => {
+  const isDark = htmlElement.getAttribute("data-theme") === "dark";
+
+  toggleTheme(isDark ? "light" : "dark");
+});
+
+
 
 const renderBooks = (data = books) => {
   readList.innerHTML = "";
@@ -137,15 +161,21 @@ formInputSection.addEventListener("submit", (e) => {
     ilustrator: ilustratorValue,
     isRead: isReadValue
   };
-
-  books.push(newBook);
-  console.log(books);
   
-  renderBooks();
-  
-  saveData();
+  const isFixed = confirm(`Apakah ${newBook.title} sudah sesuai?`);
+  if (isFixed) {
+    books.push(newBook);
+    console.log(books);
+    
+    renderBooks();
+    
+    saveData();
 
-  formInputSection.reset();
+    formInputSection.reset();
+  } else {
+    return false;
+  };
+
 });
 
 formSearchSeaction.addEventListener("submit", (e) => {
